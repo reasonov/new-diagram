@@ -1,0 +1,249 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Graphik LCG', Arial, sans-serif;
+}
+
+#app {
+    display: flex;
+    align-items: flex-end;
+
+    min-height: 100vh;
+
+    padding-bottom: 120px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    outline: inherit;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.graph-section {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1720px;
+    width: 100%;
+    padding: 0 60px;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+.graph__title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.graph__wrapper {
+    position: relative;
+
+    width: 790px;
+    height: 340px;
+    padding: 40px;
+    padding-left: 70px;
+
+    box-sizing: border-box;
+    box-shadow: 0 17px 40px rgba(19, 49, 97, 0.07), 0 6.20528px 21.901px rgba(19, 49, 97, 0.0482987), 0 3.01255px 10.6325px rgba(19, 49, 97, 0.0389404), 0 1.47681px 5.21226px rgba(19, 49, 97, 0.0310596), 0px 0.583932px 2.06094px rgba(19, 49, 97, 0.0217013);
+    border-radius: 30px;
+
+    background-color: #fff;
+}
+
+.preloader-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.need-sync {
+    position: absolute;
+    bottom: 40px;
+
+    width: calc(100% - 110px);
+
+    font-size: 20px;
+    text-align: center;
+    color: #6D6D6D;
+}
+
+.axis-wrapper {
+    position: absolute;
+    top: 0;
+    left: -35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 180px;
+
+    font-size: 14px;
+}
+
+.graph__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.graph__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: 180px;
+}
+
+.item__background {
+    position: absolute;
+    left: 0;
+
+    display: block;
+    width: 3px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background-color: #F0F3F8;
+}
+
+.line--active {
+    background-color: #5CC3C6;
+}
+
+.graph__line {
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+
+    display: block;
+    min-width: 8px;
+    max-width: 8px;
+    height: 130px;
+
+    border-radius: 12px;
+}
+
+.graph__line--grey {
+    left: -6px;
+    z-index: 2;
+    background-color: #CDCDCD;
+}
+
+.yellow {
+    background-color: #FFC549;
+}
+
+.grey {
+    background-color: #CDCDCD;
+}
+
+.graph__bottom {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 40px;
+}
+
+.graph__info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.info__item {
+    display: flex;
+    margin-right: 40px;
+}
+
+.info__text {
+    margin-left: 10px;
+
+    font-size: 14px;
+}
+
+.info__color {
+    display: block;
+    width: 8px;
+    height: 15px;
+
+    border-radius: 12px;
+}
+
+.item--yellow {
+    background-color: #FFC549;
+}
+
+.item--grey {
+    background-color: #CDCDCD;
+}
+
+.graph__about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 136px;
+    height: 40px;
+
+    border: 1.7px solid #FFC549;
+    box-sizing: border-box;
+    border-radius: 12px;
+
+    font-size: 14px;
+}
+
+.graph-container {
+    position: relative;
+    width: 680px;
+    height: 260px;
+}
+
+.graphAm-enter-active, .graphAm-leave-active {
+    transition: 1s all ease;
+}
+
+.graphAm-enter-from, .graphAm-leave-to {
+    opacity: 0;
+    transform: translateY(-50px);
+}
